@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout     xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data >
+        <variable
+            name="smsInfo"
+            type="com.nur.moviesapp.remote.model.SMSInfo" />
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/smsDestination"
+        android:lines="1"
+        android:hint="To: "
+        android:inputType="number"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:text="@{smsInfo.text}"
+        android:inputType="textMultiLine"
+        android:gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:imageURL="@{smsInfo.imageUrl}"/>
+
+</LinearLayout>
+
+</layout>

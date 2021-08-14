@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout     xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="movie"
+            type="com.nur.moviesapp.remote.model.MovieDetails" />
+
+        <variable
+            name="palette"
+            type="com.nur.moviesapp.remote.model.MoviePalette" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@{palette.color}"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+    <ProgressBar
+        android:id="@+id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:scaleType="center"
+        android:imageURL="@{movie.poster}"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        style="@style/Title"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:text="@{movie.title}"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/Text"
+        android:layout_margin="4dp"
+        android:text="@{movie.released}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/Title"
+            android:layout_margin="4dp"
+            android:text="Genre : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/Text"
+            android:layout_margin="4dp"
+            android:text="@{movie.genre}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/Title"
+            android:layout_margin="4dp"
+            android:text="Director : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/Text"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:text="@{movie.director}"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/Title"
+            android:layout_margin="4dp"
+            android:text="Actors : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/Text"
+            android:layout_margin="4dp"
+            android:text="@{movie.actors}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/Title"
+            android:layout_margin="4dp"
+            android:text="Plot : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/Text"
+            android:layout_margin="4dp"
+            android:text="@{movie.plot}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</layout>
