@@ -3,7 +3,7 @@
     <data >
         <variable
             name="smsInfo"
-            type="com.nur.moviesapp.remote.model.SMSInfo" />
+            type="com.nur.moviesapp.domain.model.SMSInfo" />
     </data>
 
 <LinearLayout

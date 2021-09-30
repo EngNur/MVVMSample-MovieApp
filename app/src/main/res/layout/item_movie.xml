@@ -4,10 +4,10 @@
     <data>
         <variable
             name="movie"
-            type="com.nur.moviesapp.remote.model.Movie" />
+            type="com.nur.moviesapp.domain.model.MovieDomain" />
         <variable
             name="listener"
-            type="com.nur.moviesapp.ui.ClickListener" />
+            type="com.nur.moviesapp.presentation.ui.ClickListener" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"

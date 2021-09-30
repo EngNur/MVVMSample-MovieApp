@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/moviesFragment"
-        android:name="com.nur.moviesapp.ui.main.MoviesFragment"
-        android:label="fragment_movies"
+        android:name="com.nur.moviesapp.presentation.ui.movieList.MovieListFragment"
+        android:label="Movies"
         tools:layout="@layout/fragment_movies" >
         <action
             android:id="@+id/actionDetials"
@@ -24,22 +24,23 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailsFragment"
-        android:name="com.nur.moviesapp.ui.details.MovieDetailsFragment"
-        android:label="MovieDetailsFragment" >
+        android:name="com.nur.moviesapp.presentation.ui.details.MovieDetailsFragment"
+        tools:layout="@layout/fragment_movie_details"
+        android:label="" >
         <action
             android:id="@+id/actionList"
             app:destination="@id/moviesFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
         <argument
-            android:name="movie"
-            app:argType="com.nur.moviesapp.remote.model.Movie" />
+            android:name="movieId"
+            app:argType="string" />
     </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.nur.moviesapp.ui.settings.SettingsFragment"
-        android:label="SettingsFragment" >
+        android:name="com.nur.moviesapp.presentation.ui.settings.SettingsFragment"
+        android:label="Settings" >
         <action
             android:id="@+id/actionSettings"
             app:destination="@id/moviesFragment"

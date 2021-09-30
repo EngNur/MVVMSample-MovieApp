@@ -3,26 +3,51 @@
     <data>
         <variable
             name="movie"
-            type="com.nur.moviesapp.remote.model.MovieDetails" />
+            type="com.nur.moviesapp.data.remote.model.MovieDetails" />
 
         <variable
             name="palette"
-            type="com.nur.moviesapp.remote.model.MoviePalette" />
+            type="com.nur.moviesapp.data.remote.model.MoviePalette" />
     </data>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-<LinearLayout
+<RelativeLayout
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="@{palette.color}"
-    android:gravity="center_horizontal"
-    android:layout_height="wrap_content">
-    <ProgressBar
-        android:id="@+id/loading_view"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/list_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+  android:visibility="gone"
+            android:text="@string/error_while_loading_data"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/details_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ScrollView
+        android:background="@{palette.color}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
 
     <ImageView
         android:scaleType="center"
@@ -131,6 +156,8 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
-</LinearLayout>
+        </LinearLayout>
     </ScrollView>
+</LinearLayout>
+</RelativeLayout>
 </layout>
